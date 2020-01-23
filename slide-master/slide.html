@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>slide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+
+
+<div class="slide" style="position:relative;margin-top: 50px;left: 250px; width:500px">
+  <img class="mySlides" src="img1.jpg" style="width:150%">
+  <img class="mySlides" src="img2.jpg" style="width:150%">
+  <img class="mySlides" src="img3.png" style="width:150%">
+  <img class="mySlides" src="img4.jpg" style="width:150%">
+  <img class="mySlides" src="img5.jpg" style="width:150%">
+  <img class="mySlides" src="img6.jpg" style="width:150%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var image = document.getElementsByClassName("mySlides");
+    for (i = 0; i < image.length; i++) {
+      image[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > image.length) {myIndex = 1}    
+    image[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+</script>
+
+</body>
+</html>
+
